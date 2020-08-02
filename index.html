@@ -66,7 +66,7 @@
                 function randomValue() {
                     let getRandom = Math.floor((Math.random() * 9000) + 1000);
                     document.getElementById("generatePin").value = getRandom;
-                    clearValue();
+                    clearValue("inputPinDisplay");
                     notificationDisplay();
 
                 }
@@ -107,12 +107,9 @@
                     } else if (document.getElementById("generatePin").value == document.getElementById("inputPinDisplay").value) {
                         document.getElementById("pinMatched").style.display = "block";
                         document.getElementById("pinNotMatched").style.display = "none";
-                        clearValue("inputPinDisplay");
-                        clearValue("generatePin");
                     } else {
                         document.getElementById("pinMatched").style.display = "none";
                         document.getElementById("pinNotMatched").style.display = "block";
-                        clearValue("inputPinDisplay");
                     }
 
                     //----------------Try Left Warning---------------
