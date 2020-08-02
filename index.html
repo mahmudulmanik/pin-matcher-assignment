@@ -94,8 +94,8 @@
 
 
                 //------------Clear Whole Value in Typing Pin Display-------------------
-                function clearValue() {
-                    document.getElementById("inputPinDisplay").value = "";
+                function clearValue(id) {
+                    document.getElementById(id).value = "";
                 }
                 //----------------End typing Pin Display--------------------------------
 
@@ -107,9 +107,13 @@
                     } else if (document.getElementById("generatePin").value == document.getElementById("inputPinDisplay").value) {
                         document.getElementById("pinMatched").style.display = "block";
                         document.getElementById("pinNotMatched").style.display = "none";
+                        clearValue("inputPinDisplay");
+                        clearValue("generatePin");
                     } else {
                         document.getElementById("pinMatched").style.display = "none";
                         document.getElementById("pinNotMatched").style.display = "block";
+                        clearValue("inputPinDisplay");
+                        clearValue("generatePin");
                     }
 
                     //----------------Try Left Warning---------------
