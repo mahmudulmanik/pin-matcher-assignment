@@ -66,7 +66,7 @@
                 function randomValue() {
                     let getRandom = Math.floor((Math.random() * 9000) + 1000);
                     document.getElementById("generatePin").value = getRandom;
-                    clearValue("inputPinDisplay");
+                    clearValue();
                     notificationDisplay();
 
                 }
@@ -94,8 +94,8 @@
 
 
                 //------------Clear Whole Value in Typing Pin Display-------------------
-                function clearValue(id) {
-                    document.getElementById(id).value = "";
+                function clearValue() {
+                    document.getElementById("inputPinDisplay").value = "";
                 }
                 //----------------End typing Pin Display--------------------------------
 
